@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Parking System – FC Road, Pune</title>
+  <title>Smart Parking System â€“ FC Road, Pune</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap"
@@ -756,7 +756,7 @@
       background: repeating-linear-gradient(90deg, transparent, transparent calc(20% - 1px), rgba(255, 255, 255, 0.04) calc(20% - 1px), rgba(255, 255, 255, 0.04) 20%);
     }
 
-    /* 5-column × 4-row grid */
+    /* 5-column Ã— 4-row grid */
     /* Individual slot */
     .slot {
       border-radius: 8px;
@@ -969,28 +969,28 @@
     <header>
       <div class="badge"><span class="live-dot"></span>Live Monitoring System</div>
       <h1>Smart Parking System<br><span>FC Road, Pune</span></h1>
-      <p class="subtitle">Using existing CCTV cameras — Sustainable &amp; Scalable Solution</p>
+      <p class="subtitle">Using existing CCTV cameras â€” Sustainable &amp; Scalable Solution</p>
     </header>
 
     <div class="flow-bar">
       <div class="flow-step active" id="flowCam">
-        <div class="flow-icon">📷</div><span>Camera</span>
+        <div class="flow-icon">ðŸ“·</div><span>Camera</span>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow">â†’</div>
       <div class="flow-step" id="flowAI">
-        <div class="flow-icon">🤖</div><span>AI Scan</span>
+        <div class="flow-icon">ðŸ¤–</div><span>AI Scan</span>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow">â†’</div>
       <div class="flow-step" id="flowDetect">
-        <div class="flow-icon">🔍</div><span>Detection</span>
+        <div class="flow-icon">ðŸ”</div><span>Detection</span>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow">â†’</div>
       <div class="flow-step" id="flowDisplay">
-        <div class="flow-icon">📊</div><span>Display</span>
+        <div class="flow-icon">ðŸ“Š</div><span>Display</span>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow">â†’</div>
       <div class="flow-step" id="flowAlert">
-        <div class="flow-icon">🚨</div><span>Alert</span>
+        <div class="flow-icon">ðŸš¨</div><span>Alert</span>
       </div>
     </div>
 
@@ -1000,17 +1000,17 @@
         <div class="stat-label">Total Slots</div>
       </div>
       <div class="stat-card avail">
-        <div class="stat-value" id="statAvail">–</div>
+        <div class="stat-value" id="statAvail">â€“</div>
         <div class="stat-label">Available</div>
       </div>
       <div class="stat-card occ">
-        <div class="stat-value" id="statOcc">–</div>
+        <div class="stat-value" id="statOcc">â€“</div>
         <div class="stat-label">Occupied / Wrong</div>
       </div>
     </div>
 
     <div id="alertBanner" class="hidden">
-      <div class="alert-icon" id="alertIcon">🚨</div>
+      <div class="alert-icon" id="alertIcon">ðŸš¨</div>
       <div>
         <div class="alert-title" id="alertTitle">Wrong Parking Detected!</div>
         <div class="alert-msg" id="alertMsg"></div>
@@ -1019,7 +1019,7 @@
 
     <div class="main-grid">
       <div class="card">
-        <div class="card-title">📡 Live Camera Feed (Simulated CCTV)</div>
+        <div class="card-title">ðŸ“¡ Live Camera Feed (Simulated CCTV)</div>
         <div class="camera-wrap">
           <div class="camera-placeholder" id="camPlaceholder">
             <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
@@ -1027,25 +1027,25 @@
               <path
                 d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M4 8h11a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z" />
             </svg>
-            <p>Camera offline – click Start</p>
+            <p>Camera offline â€“ click Start</p>
           </div>
           <video id="videoFeed" autoplay playsinline muted></video>
-          <div class="cam-hud" id="camHud">CAM-01 FC-ROAD<br><span id="hudTime"></span><br>RES: 1280×720</div>
-          <div class="cam-hud-br" id="camHudBr">● REC &nbsp;|&nbsp; AI ACTIVE</div>
+          <div class="cam-hud" id="camHud">CAM-01 FC-ROAD<br><span id="hudTime"></span><br>RES: 1280Ã—720</div>
+          <div class="cam-hud-br" id="camHudBr">â— REC &nbsp;|&nbsp; AI ACTIVE</div>
           <div class="scan-line" id="scanLine"></div>
         </div>
         <div class="btn-row">
-          <button class="btn btn-cyan" id="btnCamera">▶ Start Live Camera</button>
+          <button class="btn btn-cyan" id="btnCamera">â–¶ Start Live Camera</button>
           <button class="btn btn-cyan" id="btnStopCamera"
-            style="display:none;color:var(--red);border-color:rgba(255,61,90,0.35)">■ Stop Camera</button>
+            style="display:none;color:var(--red);border-color:rgba(255,61,90,0.35)">â–  Stop Camera</button>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-title">🖥 System Log</div>
+        <div class="card-title">ðŸ–¥ System Log</div>
         <div class="log-box" id="logBox"></div>
         <div class="btn-row" style="margin-top:1rem;justify-content:flex-end">
-          <button class="btn btn-ai" id="btnAI">🤖 &nbsp; Scan Parking (AI)</button>
+          <button class="btn btn-ai" id="btnAI">ðŸ¤– &nbsp; Scan Parking (AI)</button>
         </div>
       </div>
     </div>
@@ -1053,7 +1053,7 @@
     <!-- PARKING GRID -->
     <div class="parking-section card">
       <div class="section-header">
-        <div class="section-title">🅿 Parking Slots – FC Road (Top-Down View)</div>
+        <div class="section-title">ðŸ…¿ Parking Slots â€“ FC Road (Top-Down View)</div>
         <div class="legend">
           <div class="legend-item">
             <div class="legend-dot g"></div>Available
@@ -1117,10 +1117,10 @@
 
   <div class="tooltip" id="tooltip"></div>
 
-  <!-- Hidden SVG vehicle templates — cloned by JS, never shown directly -->
+  <!-- Hidden SVG vehicle templates â€” cloned by JS, never shown directly -->
   <div style="display:none" id="svgBank">
 
-    <!-- TOP-DOWN SEDAN � Blue -->
+    <!-- TOP-DOWN SEDAN — Blue -->
     <svg id="v-sedan-blue" viewBox="0 0 52 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="8" width="36" height="76" rx="14" fill="#163b8f" />
       <rect x="10" y="10" width="32" height="72" rx="13" fill="#2563eb" />
@@ -1142,7 +1142,7 @@
       <circle cx="37" cy="72" r="2.1" fill="#475569" />
     </svg>
 
-    <!-- TOP-DOWN SEDAN � Red -->
+    <!-- TOP-DOWN SEDAN — Red -->
     <svg id="v-sedan-red" viewBox="0 0 52 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="8" width="36" height="76" rx="14" fill="#7f1d1d" />
       <rect x="10" y="10" width="32" height="72" rx="13" fill="#dc2626" />
@@ -1164,7 +1164,7 @@
       <circle cx="37" cy="72" r="2.1" fill="#475569" />
     </svg>
 
-    <!-- TOP-DOWN SEDAN � Silver -->
+    <!-- TOP-DOWN SEDAN — Silver -->
     <svg id="v-sedan-silver" viewBox="0 0 52 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="8" width="36" height="76" rx="14" fill="#475569" />
       <rect x="10" y="10" width="32" height="72" rx="13" fill="#94a3b8" />
@@ -1186,7 +1186,7 @@
       <circle cx="37" cy="72" r="2.1" fill="#475569" />
     </svg>
 
-    <!-- TOP-DOWN SEDAN � Black -->
+    <!-- TOP-DOWN SEDAN — Black -->
     <svg id="v-sedan-black" viewBox="0 0 52 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="8" width="36" height="76" rx="14" fill="#020617" />
       <rect x="10" y="10" width="32" height="72" rx="13" fill="#1e293b" />
@@ -1208,7 +1208,7 @@
       <circle cx="37" cy="72" r="2.1" fill="#334155" />
     </svg>
 
-    <!-- TOP-DOWN SEDAN � White -->
+    <!-- TOP-DOWN SEDAN — White -->
     <svg id="v-sedan-white" viewBox="0 0 52 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="8" width="36" height="76" rx="14" fill="#94a3b8" />
       <rect x="10" y="10" width="32" height="72" rx="13" fill="#e2e8f0" />
@@ -1230,7 +1230,7 @@
       <circle cx="37" cy="72" r="2.1" fill="#475569" />
     </svg>
 
-    <!-- TOP-DOWN SCOOTER � Yellow -->
+    <!-- TOP-DOWN SCOOTER — Yellow -->
     <svg id="v-scooter-yellow" viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="20" cy="18" r="7" fill="#020617" />
       <circle cx="20" cy="18" r="3.2" fill="#64748b" />
@@ -1248,7 +1248,7 @@
       <circle cx="12.5" cy="63" r="1.6" fill="#f87171" />
     </svg>
 
-    <!-- TOP-DOWN SCOOTER � Cyan -->
+    <!-- TOP-DOWN SCOOTER — Cyan -->
     <svg id="v-scooter-cyan" viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="20" cy="18" r="7" fill="#020617" />
       <circle cx="20" cy="18" r="3.2" fill="#64748b" />
@@ -1266,7 +1266,7 @@
       <circle cx="12.5" cy="63" r="1.6" fill="#f87171" />
     </svg>
 
-    <!-- TOP-DOWN SCOOTER � Plum -->
+    <!-- TOP-DOWN SCOOTER — Plum -->
     <svg id="v-scooter-plum" viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="20" cy="18" r="7" fill="#020617" />
       <circle cx="20" cy="18" r="3.2" fill="#64748b" />
@@ -1312,21 +1312,21 @@
   <footer>
     <p>Smart Parking System &mdash; FC Road, Pune &nbsp;|&nbsp; <span>AI-Powered Detection</span> &nbsp;|&nbsp; Using
       existing CCTV cameras (sustainable solution)</p>
-    <p style="margin-top:4px">Tushar K | Harshal P | Rohit K &nbsp;·&nbsp; Not a production system
+    <p style="margin-top:4px">Tushar K | Harshal P | Rohit K &nbsp;Â·&nbsp; Hassle-Free Parking at FC Road
     </p>
   </footer>
 
   <script>
     /*
       ================================================================
-      SMART PARKING SYSTEM — JavaScript Engine
+      SMART PARKING SYSTEM â€” JavaScript Engine
       ================================================================
       Sections:
         A. Weighted random status assignment
         B. SVG vehicle cloning from hidden template bank
         C. Slot DOM builder (car/truck inside each bay)
         D. Grid generation + stat update + alert banner
-        E. AI Scan button — async scan simulation
+        E. AI Scan button â€” async scan simulation
         F. Camera (getUserMedia)
         G. Flow bar + Logger helpers
       ================================================================
@@ -1361,8 +1361,8 @@
 
     /* B. SVG VEHICLE CLONE
        Grabs template from hidden #svgBank and returns a deep clone.
-       - occupied → random car or two-wheeler
-       - wrong    → truck (CSS rotates it to look badly parked)
+       - occupied â†’ random car or two-wheeler
+       - wrong    â†’ truck (CSS rotates it to look badly parked)
     */
     function cloneVehicle(status) {
       if (status === 'wrong') {
@@ -1412,7 +1412,7 @@
       if (status === 'wrong') {
         const badge = document.createElement('div');
         badge.className = 'wrong-badge';
-        badge.textContent = '⚠ WRONG';
+        badge.textContent = 'âš  WRONG';
         slot.appendChild(badge);
       }
 
@@ -1426,10 +1426,10 @@
       const statusLabels = {
         available: 'Empty Bay',
         occupied: slot.dataset.vehicleType === 'two-wheeler' ? 'Two-Wheeler Parked' : 'Car Parked',
-        wrong: 'Truck — Wrong Parking ⚠'
+        wrong: 'Truck â€” Wrong Parking âš '
       };
       slot.addEventListener('mousemove', e => {
-        tooltip.textContent = `${locationName} — ${statusLabels[status]}`;
+        tooltip.textContent = `${locationName} â€” ${statusLabels[status]}`;
         tooltip.classList.add('show');
         tooltip.style.left = (e.clientX + 14) + 'px';
         tooltip.style.top = (e.clientY + 14) + 'px';
@@ -1469,15 +1469,15 @@
       const banner = document.getElementById('alertBanner');
       if (wrongSlots.length > 0) {
         banner.className = 'bad';
-        document.getElementById('alertTitle').textContent = '⚠ Wrong Parking Detected!';
+        document.getElementById('alertTitle').textContent = 'âš  Wrong Parking Detected!';
         document.getElementById('alertMsg').textContent =
-          `Truck illegally parked at: ${wrongSlots.map(n => LANDMARKS[(n - 1) % LANDMARKS.length]).join(', ')} — Authority has been alerted.`;
-        document.getElementById('alertIcon').textContent = '🚨';
+          `Truck illegally parked at: ${wrongSlots.map(n => LANDMARKS[(n - 1) % LANDMARKS.length]).join(', ')} â€” Authority has been alerted.`;
+        document.getElementById('alertIcon').textContent = 'ðŸš¨';
       } else {
         banner.className = 'ok';
-        document.getElementById('alertTitle').textContent = '✔ All Clear — No Violations';
+        document.getElementById('alertTitle').textContent = 'âœ” All Clear â€” No Violations';
         document.getElementById('alertMsg').textContent = 'All vehicles are properly parked within bay lines.';
-        document.getElementById('alertIcon').textContent = '✅';
+        document.getElementById('alertIcon').textContent = 'âœ…';
       }
 
       return { avail, occ, wrongSlots };
@@ -1486,9 +1486,9 @@
     /* E. AI SCAN SIMULATION */
     document.getElementById('btnAI').addEventListener('click', async () => {
       const btn = document.getElementById('btnAI');
-      btn.disabled = true; btn.classList.add('scanning'); btn.textContent = '⏳  Scanning…';
+      btn.disabled = true; btn.classList.add('scanning'); btn.textContent = 'â³  Scanningâ€¦';
 
-      log('AI scan started. Analysing video frames…', 'info');
+      log('AI scan started. Analysing video framesâ€¦', 'info');
       activateFlow(['cam', 'ai'], 220);
       document.getElementById('scanLine').classList.add('active');
 
@@ -1498,25 +1498,25 @@
       const result = generateSlots();
       activateFlow(['cam', 'ai', 'detect', 'display', 'alert'], 160);
 
-      log(`Scan done — Empty:${result.avail} | Cars:${result.occ - result.wrongSlots.length} | Wrong:${result.wrongSlots.length}`, 'ok');
+      log(`Scan done â€” Empty:${result.avail} | Cars:${result.occ - result.wrongSlots.length} | Wrong:${result.wrongSlots.length}`, 'ok');
 
       if (result.wrongSlots.length > 0) {
         const names = result.wrongSlots.map(n => LANDMARKS[(n - 1) % LANDMARKS.length]).join(', ');
         log(`Truck detected at: ${names}`, 'warn');
         log('Authority notified via SMS + email.', 'err');
-        setTimeout(() => alert(`⚠️ Wrong Parking Detected!\n\nA TRUCK is illegally parked at slot(s):\n${names}\n\n✅ Alert Sent to Authority!`), 300);
+        setTimeout(() => alert(`âš ï¸ Wrong Parking Detected!\n\nA TRUCK is illegally parked at slot(s):\n${names}\n\nâœ… Alert Sent to Authority!`), 300);
       } else {
         log('All clear. No violations found.', 'ok');
       }
 
-      btn.disabled = false; btn.classList.remove('scanning'); btn.textContent = '🤖   Scan Parking (AI)';
+      btn.disabled = false; btn.classList.remove('scanning'); btn.textContent = 'ðŸ¤–   Scan Parking (AI)';
     });
 
     /* F. CAMERA */
     let camStream = null;
     document.getElementById('btnCamera').addEventListener('click', async () => {
       try {
-        log('Requesting webcam…', 'info');
+        log('Requesting webcamâ€¦', 'info');
         camStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         const v = document.getElementById('videoFeed');
         v.srcObject = camStream; v.style.display = 'block';
@@ -1526,7 +1526,7 @@
         document.getElementById('btnCamera').style.display = 'none';
         document.getElementById('btnStopCamera').style.display = 'inline-flex';
         activateFlow(['cam'], 0);
-        log('Camera active — CAM-01 FC-ROAD', 'ok');
+        log('Camera active â€” CAM-01 FC-ROAD', 'ok');
         (function tick() { if (!camStream) return; document.getElementById('hudTime').textContent = new Date().toLocaleTimeString('en-IN', { hour12: false }); requestAnimationFrame(tick); })();
       } catch (e) {
         log(`Camera error: ${e.message}`, 'err');
@@ -1561,7 +1561,7 @@
     /* INIT */
     window.addEventListener('load', () => {
       generateSlots();
-      log('System online — FC Road monitoring active.', 'info');
+      log('System online â€” FC Road monitoring active.', 'info');
       log('Click "Scan Parking (AI)" to simulate a detection cycle.', '');
       activateFlow(['cam', 'display'], 350);
     });
