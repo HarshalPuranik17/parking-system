@@ -62,7 +62,106 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.05) 2px, rgba(0, 0, 0, 0.05) 4px);
+      background:
+        radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.08), transparent 16%),
+        radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.06), transparent 18%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(0, 0, 0, 0.06));
+      animation: bgGlow 18s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 96px, rgba(255, 255, 255, 0.018) 96px 97px),
+        linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.035) 46%, transparent 52%, transparent 100%),
+        linear-gradient(180deg, rgba(8, 14, 24, 0.06) 0%, rgba(4, 8, 16, 0.22) 40%, rgba(2, 6, 12, 0.76) 100%);
+      opacity: 0.42;
+      animation: bgSweep 22s linear infinite;
+    }
+
+    .wrapper::before {
+      content: '';
+      position: fixed;
+      inset: -8% -6%;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 26% 28%, rgba(255, 255, 255, 0.08) 0 2.4%, transparent 2.9%),
+        radial-gradient(circle at 74% 24%, rgba(255, 255, 255, 0.06) 0 2.2%, transparent 2.8%),
+        radial-gradient(circle at 46% 82%, rgba(255, 255, 255, 0.05) 0 2.2%, transparent 2.8%);
+      filter: blur(18px);
+      opacity: 0.36;
+      animation: bgFloat 20s ease-in-out infinite alternate;
+    }
+
+    .wrapper::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 18%, transparent 19%),
+        linear-gradient(180deg, rgba(9, 18, 30, 0.42) 0%, rgba(5, 11, 20, 0.16) 32%, rgba(3, 7, 14, 0.64) 100%);
+      backdrop-filter: blur(10px);
+      opacity: 0.9;
+    }
+
+    @keyframes bgGlow {
+      from {
+        transform: scale(1) translate3d(0, 0, 0);
+        opacity: 0.72;
+      }
+      to {
+        transform: scale(1.03) translate3d(1.2%, -1%, 0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bgSweep {
+      from {
+        background-position: 0 0, -20% 0, 0 0;
+      }
+      to {
+        background-position: 0 0, 120% 0, 0 0;
+      }
+    }
+
+    @keyframes bgFloat {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      to {
+        transform: translate3d(-1%, 1.2%, 0) scale(1.03);
+      }
+    }
+
+    .smoke-dot {
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(200, 215, 230, 0.16) 42%, rgba(120, 140, 160, 0.05) 72%, transparent 100%);
+      filter: blur(10px);
+      mix-blend-mode: screen;
+      animation: smokeFade 1250ms ease-out forwards;
+    }
+
+    @keyframes smokeFade {
+      from {
+        opacity: 0.72;
+        transform: translate(-50%, -50%) scale(0.75);
+      }
+      to {
+        opacity: 0;
+        transform: translate(-50%, -105%) scale(2.05);
+      }
     }
 
     .wrapper {
@@ -72,7 +171,6 @@
       margin: 0 auto;
       padding: 0 1.5rem 4rem;
     }
-
     /* HEADER */
     header {
       display: flex;
@@ -135,7 +233,7 @@
 
     .subtitle {
       font-size: 0.8rem;
-      color: var(--muted);
+      color: rgba(226, 234, 244, 0.82);
       margin-top: 0.5rem;
       font-family: var(--font-mono);
       letter-spacing: 0.05em;
@@ -379,7 +477,7 @@
       font-family: var(--font-head);
       font-size: 0.75rem;
       letter-spacing: 0.18em;
-      color: var(--muted);
+      color: rgba(226, 234, 244, 0.78);
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
@@ -626,7 +724,7 @@
       gap: 5px;
       font-size: 0.68rem;
       font-family: var(--font-mono);
-      color: var(--muted);
+      color: rgba(226, 234, 244, 0.78);
       text-transform: uppercase;
       letter-spacing: 0.1em
     }
@@ -832,18 +930,21 @@
     }
 
     .slot.available .slot-num {
-      color: var(--green);
-      background: rgba(0, 230, 118, 0.12);
+      color: #8ff7bf;
+      background: rgba(0, 230, 118, 0.18);
+      text-shadow: 0 0 8px rgba(0, 230, 118, 0.18);
     }
 
     .slot.occupied .slot-num {
-      color: var(--red);
-      background: rgba(255, 61, 90, 0.12);
+      color: #ff9dac;
+      background: rgba(255, 61, 90, 0.18);
+      text-shadow: 0 0 8px rgba(255, 61, 90, 0.16);
     }
 
     .slot.wrong .slot-num {
-      color: var(--orange);
-      background: rgba(255, 145, 0, 0.15);
+      color: #ffc37a;
+      background: rgba(255, 145, 0, 0.2);
+      text-shadow: 0 0 8px rgba(255, 145, 0, 0.16);
     }
 
     /* Vehicle wrapper inside slot */
@@ -951,7 +1052,7 @@
       text-align: center;
       padding: 1.5rem 0 0.5rem;
       font-size: 0.72rem;
-      color: var(--muted);
+      color: rgba(226, 234, 244, 0.76);
       font-family: var(--font-mono);
       letter-spacing: 0.05em;
       border-top: 1px solid var(--border)
@@ -1310,7 +1411,7 @@
   <footer>
     <p>Smart Parking System &mdash; FC Road, Pune &nbsp;|&nbsp; <span>AI-Powered Detection</span> &nbsp;|&nbsp; Using
       existing CCTV cameras (sustainable solution)</p>
-    <p style="margin-top:4px">Tushar K | Harshal P | Rohit K &nbsp;·&nbsp; Hassle-Free Parking
+    <p style="margin-top:4px">Tushar K | Harshal P | Rohit K &nbsp;·&nbsp; Not a production system
     </p>
   </footer>
 
@@ -1556,6 +1657,32 @@
     }
     const tooltip = document.getElementById('tooltip');
 
+    let smokeTick = 0;
+    document.addEventListener('mousemove', e => {
+      const now = Date.now();
+      if (now - smokeTick < 18) return;
+      smokeTick = now;
+
+      const dot = document.createElement('div');
+      dot.className = 'smoke-dot';
+      dot.style.left = `${e.clientX}px`;
+      dot.style.top = `${e.clientY}px`;
+      dot.style.width = `${18 + Math.random() * 18}px`;
+      dot.style.height = dot.style.width;
+      document.body.appendChild(dot);
+
+      const ghost = document.createElement('div');
+      ghost.className = 'smoke-dot';
+      ghost.style.left = `${e.clientX + (Math.random() * 10 - 5)}px`;
+      ghost.style.top = `${e.clientY + (Math.random() * 10 - 5)}px`;
+      ghost.style.width = `${12 + Math.random() * 12}px`;
+      ghost.style.height = ghost.style.width;
+      ghost.style.opacity = '0.5';
+      document.body.appendChild(ghost);
+
+      setTimeout(() => dot.remove(), 1250);
+      setTimeout(() => ghost.remove(), 1250);
+    });
     /* INIT */
     window.addEventListener('load', () => {
       generateSlots();
@@ -1567,6 +1694,15 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
